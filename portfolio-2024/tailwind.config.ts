@@ -9,9 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'background-gif': "url('/background.gif')",
+        'radial-gradient': 'radial-gradient(ellipse at center bottom, #1B2735 0%, #090A0F 100%)',
       },
     },
   },
