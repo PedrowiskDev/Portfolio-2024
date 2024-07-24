@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'background-gif': "url('/background.gif')",
+        'background-img': "url('/sun-logo.png')",
         'radial-gradient': 'radial-gradient(ellipse at center bottom, #1B2735 0%, #090A0F 100%)',
       },
     },

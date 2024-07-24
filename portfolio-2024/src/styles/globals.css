@@ -1,17 +1,72 @@
+/* styles/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
 }
 
+.default-bg {
+  background-color: transparent;
+}
+
+.background {
+  height: 100vh;
+  background: radial-gradient(circle at center,
+      #162055 0%,
+      #00020e 100%);
+  position: relative;
+
+}
+
+.background.animate {
+  background: radial-gradient(circle at bottom,
+      #162055 0%,
+      #00020e 100%);
+}
+
+.custom-bg-size {
+  /*background-image: url("../../public/sun-logo.png");*/
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.nav-glass-effect {
+  background: rgba(66, 86, 117, 0.06);
+  border-bottom: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border: 1px solid rgba(66, 86, 117, 0.12);
+}
+
+.glass-effect {
+  background: rgba(25, 53, 84, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.button-hover:hover .hover-span {
+  opacity: 1;
+}
+
+
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-60%);
   }

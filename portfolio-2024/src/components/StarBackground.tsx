@@ -25,7 +25,7 @@ const Background: React.FC<BackgroundProps> = ({ children, startFalling = false 
           return (
             <div
               key={`${size}-${i}`}
-              className={`${BackgroundStyles.stars} ${BackgroundStyles[size]}`}
+              className={`background ${BackgroundStyles.stars} ${BackgroundStyles[size]}`}
               style={style}
             />
           );
