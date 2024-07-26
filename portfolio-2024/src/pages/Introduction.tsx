@@ -8,11 +8,11 @@ const Introduction: React.FC = () => {
       <Navbar />
 
       <NavButton destination="/" direction="up" label="Voltar" />
-      <NavButton destination="/Projects" direction="right" label="Projetos" />
-      <NavButton destination="/Contact" direction="down" label="Contato" />
-      <NavButton destination="/About" direction="left" label="Sobre Mim" />
+      <NavButton destination="/projects" direction="right" label="Projetos" />
+      <NavButton destination="/contact" direction="down" label="Contato" />
+      <NavButton destination="/about" direction="left" label="Sobre Mim" />
 
-
+      
     </div>
   );
 

@@ -67,7 +67,7 @@ export default function Home() {
                 showArrow ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <Link href="/Introduction">
+              <Link href="/introduction">
                 <button className="transition-opacity duration-700">
                   <FaArrowDown className="h-11 w-11 bounce text-white transition-transform transform hover:scale-125 hover:text-gray-400" />
                 </button>

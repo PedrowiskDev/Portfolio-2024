@@ -30,17 +30,17 @@ const Navbar = () => {
             </motion.div>
 
             <ul className={`flex h-16 space-x-20 w-full justify-center items-center text-white text-2xl font-thin ${Roboto_font.className}`}>
-                <button onClick={() => router.push('/Introduction')}>
-                    <li className={getNavItemClass('/Introduction')}>Home</li>
+                <button onClick={() => router.push('/introduction')}>
+                    <li className={getNavItemClass('/introduction')}>Home</li>
                 </button>
-                <button onClick={() => router.push('/About')}>
-                    <li className={getNavItemClass('/About')}>Sobre Mim</li>
+                <button onClick={() => router.push('/projects')}>
+                    <li className={getNavItemClass('/projects')}>Projetos</li>
                 </button>
-                <button onClick={() => router.push('/Projects')}>
-                    <li className={getNavItemClass('/Projects')}>Projetos</li>
+                <button onClick={() => router.push('/about')}>
+                    <li className={getNavItemClass('/about')}>Sobre Mim</li>
                 </button>
-                <button onClick={() => router.push('/Contact')}>
-                    <li className={getNavItemClass('/Contact')}>Contato</li>
+                <button onClick={() => router.push('/contact')}>
+                    <li className={getNavItemClass('/contact')}>Contato</li>
                 </button>
             </ul>
         </motion.nav>
