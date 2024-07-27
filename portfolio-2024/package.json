@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/plugin-transform-class-properties": "^7.24.7",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.7",
+    "@babel/plugin-transform-optional-chaining": "^7.24.8",
     "@eslint/config-array": "^0.17.1",
     "@eslint/object-schema": "^2.1.4",
     "framer-motion": "^11.3.18",
