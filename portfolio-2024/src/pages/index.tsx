@@ -51,9 +51,9 @@ export default function Home() {
   return (
     <>
       <Background startFalling={startFalling}>
-        <div className="flex flex-col justify-between h-screen">
-          <div className="flex-grow flex items-center justify-center">
-            <div className={`text-white text-5xl font-thin ${Roboto_font.className}`}>
+        <div className="flex flex-col items-center justify-between h-screen px-4 md:px-8 lg:px-16">
+          <div className="flex-grow flex items-center justify-center text-center">
+            <div className={`text-white text-3xl md:text-4xl lg:text-5xl font-thin ${Roboto_font.className}`}>
               <h1>
                 {displayedText || " "}
                 {isBlinking && <span className="animate-pulse mx-0">|</span>}
@@ -63,13 +63,13 @@ export default function Home() {
 
           {!isTyping && (
             <div
-              className={`absolute bottom-16 left-1/2 transform -translate-x-1/2 transition-opacity duration-700 ${
+              className={`absolute bottom-8 md:bottom-16 left-1/2 transform -translate-x-1/2 transition-opacity duration-700 ${
                 showArrow ? 'opacity-100' : 'opacity-0'
               }`}
             >
               <Link href="/introduction">
                 <button className="transition-opacity duration-700">
-                  <FaArrowDown className="h-11 w-11 bounce text-white transition-transform transform hover:scale-125 hover:text-gray-400" />
+                  <FaArrowDown className="h-8 w-8 md:h-11 md:w-11 bounce text-white transition-transform transform hover:scale-125 hover:text-gray-400" />
                 </button>
               </Link>
             </div>

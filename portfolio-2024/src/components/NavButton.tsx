@@ -23,7 +23,7 @@ const NavButton: React.FC<NavButtonProps> = ({ destination, direction, label }) 
             break;
         case 'down':
             rotationClass = 'rotate-180';
-            positionStyles = { bottom: '-2rem', left: '50%', transform: 'translateX(-50%)' };
+            positionStyles = { bottom: '-1rem', left: '50%', transform: 'translateX(-50%)' };
             labelStyles = { top: '-2.5rem' };
             break;
         case 'left':
@@ -48,7 +48,7 @@ const NavButton: React.FC<NavButtonProps> = ({ destination, direction, label }) 
             className={`transition-transform text-white transform hover:scale-125 hover:font-semibold absolute button-hover mb-8 ${rotationClass}`}
             style={{ ...positionStyles }}
         >
-            <RiArrowUpWideLine className={`text-5xl ${rotationClass}`} />
+            <RiArrowUpWideLine className={`text-sm md:text-4xl lg:text-5xl ${rotationClass}`} />
             <span
                 className={`absolute text-lg cursor-pointer opacity-0 transition-opacity duration-300 hover-span`}
                 style={{ ...labelStyles, left: '50%', transform: 'translateX(-50%)' }}

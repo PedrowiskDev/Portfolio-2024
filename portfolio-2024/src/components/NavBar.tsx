@@ -19,29 +19,29 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ duration: 0.5 }}
-            className="fixed top-0 left-0 w-full nav-glass-effect text-white p-4 z-50 flex items-center"
+            className="fixed top-0 left-0 w-full nav-glass-effect text-white p-4 z-50 flex items-center justify-between md:justify-center"
         >
             <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
-                className="mr-4"
+                className="mr-4 flex-shrink-0"
             >
-                <Image src="/sun-logo.png" alt="Logo" width={100} height={100} />
+                <Image src="/sun-logo.png" alt="Logo" width={80} height={80} />
             </motion.div>
 
-            <ul className={`flex h-16 space-x-20 w-full justify-center items-center text-white text-2xl font-thin ${Roboto_font.className}`}>
-                <button onClick={() => router.push('/introduction')}>
-                    <li className={getNavItemClass('/introduction')}>Home</li>
-                </button>
-                <button onClick={() => router.push('/projects')}>
-                    <li className={getNavItemClass('/projects')}>Projetos</li>
-                </button>
-                <button onClick={() => router.push('/about')}>
-                    <li className={getNavItemClass('/about')}>Sobre Mim</li>
-                </button>
-                <button onClick={() => router.push('/contact')}>
-                    <li className={getNavItemClass('/contact')}>Contato</li>
-                </button>
+            <ul className={`flex space-x-4 md:space-x-8 lg:space-x-16 w-full justify-center items-center text-white text-sm md:text-xl lg:text-3xl font-thin ${Roboto_font.className}`}>
+                <li className={getNavItemClass('/introduction')}>
+                    <button onClick={() => router.push('/introduction')}>Home</button>
+                </li>
+                <li className={getNavItemClass('/projects')}>
+                    <button onClick={() => router.push('/projects')}>Projetos</button>
+                </li>
+                <li className={getNavItemClass('/about')}>
+                    <button onClick={() => router.push('/about')}>Sobre Mim</button>
+                </li>
+                <li className={getNavItemClass('/contact')}>
+                    <button onClick={() => router.push('/contact')}>Contato</button>
+                </li>
             </ul>
         </motion.nav>
     );
