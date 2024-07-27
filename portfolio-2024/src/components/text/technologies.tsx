@@ -19,13 +19,13 @@ const TechnologiesProps: React.FC<TechnologiesProps> = ({ title, imagens }) => {
             {imagens && (
                 <div className="flex flex-wrap justify-center gap-6 mt-4">
                     {imagens.map((src, index) => (
-                        <div key={index} className="flex-shrink-0 w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 flex items-center justify-center">
+                        <div key={index} className="flex-shrink-0 w-16 h-16 md:w-24 md:h-24 lg:w-64 lg:h-64 flex items-center justify-center">
                             <Image
                                 src={src}
                                 alt={`Imagem ${index}`}
                                 layout="intrinsic" // Usa o layout intrinsic para o ajuste de tamanho
-                                width={100} // Ajuste a largura conforme necessário
-                                height={100} // Ajuste a altura conforme necessário
+                                width={800} // Ajuste a largura conforme necessário
+                                height={800} // Ajuste a altura conforme necessário
                                 className="object-contain"
                             />
                         </div>

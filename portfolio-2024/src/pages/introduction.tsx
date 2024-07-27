@@ -6,8 +6,9 @@ import TechnologiesProps from '@/components/text/technologies';
 
 const imagens = [
   '/reactLogo.png',
-  '/tailwindLogo.png',
-  '/next.jsLogo.png'
+  '/tailwindcssLogo.png',
+  '/nextJsLogo.png',
+  '/typescriptLogo.png'
 ];
 
 const Introduction: React.FC = () => {
