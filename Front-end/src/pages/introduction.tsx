@@ -4,6 +4,7 @@ import NavButton from '../components/NavButton';
 import Navbar from '../components/NavBar';
 import Header from '@/components/text/header';
 import TechnologiesProps from '@/components/text/technologies';
+import ParticlesBackground from '@/components/ParticlesBackground';
 
 const imagens = [
   '/reactLogo.png',
@@ -18,6 +19,7 @@ const imagens = [
 const Introduction: React.FC = () => {
   return (
     <div className="background pt-48 overflow-auto h-screen relative">
+      <ParticlesBackground />
       <Navbar />
 
       <NavButton destination="/" direction="up" label="Voltar" />

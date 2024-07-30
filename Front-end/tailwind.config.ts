@@ -10,7 +10,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'background-img': "url('/sun-logo.png')",
-        'radial-gradient': 'radial-gradient(ellipse at center bottom, #1B2735 0%, #090A0F 100%)',
       },
       textShadow: {
         'lg': '0 2px 4px rgba(0, 0, 0, 0.5)',
