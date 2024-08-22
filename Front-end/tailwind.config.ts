@@ -1,4 +1,4 @@
-const textShadow = require('tailwindcss-textshadow'); // Importando com require
+const textShadow = require('tailwindcss-textshadow');
 
 module.exports = {
   content: [

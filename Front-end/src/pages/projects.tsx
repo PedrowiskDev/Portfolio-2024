@@ -1,8 +1,17 @@
 import Navbar from '../components/NavBar';
+import ParticlesBackground from '@/components/ParticlesBackground';
+import ProjectsComponent from '@/components/ProjectsComponent';
 
 const Projects: React.FC = () => {
     return (
-        <Navbar />
+        <>
+            <ParticlesBackground />
+            <Navbar />
+            <div className="pb-1">
+                <ProjectsComponent />
+            </div>
+        </>
+        
     );
 };
 

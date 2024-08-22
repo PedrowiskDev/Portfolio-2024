@@ -1,4 +1,3 @@
-/* Tailwind CSS imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,11 +7,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+
 }
 
 .background {
   height: 100vh;
+  overflow-y: auto;
   background: radial-gradient(circle at center, #162055 0%, #00020e 100%);
   position: relative;
   z-index: 0;
@@ -28,7 +28,6 @@ body {
   top: 0;
   z-index: -1;
 }
-
 
 .relative-container {
   position: relative;
@@ -50,24 +49,27 @@ body {
 }
 
 .glass-effect {
-  background: rgba(25, 53, 84, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background: rgba(66, 86, 117, 0.06);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
 }
+
+
 
 .button-hover:hover .hover-span {
   opacity: 1;
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-60%);
   }

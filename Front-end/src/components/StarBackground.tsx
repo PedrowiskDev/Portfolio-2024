@@ -15,7 +15,7 @@ const Background: React.FC<BackgroundProps> = ({ children, startFalling = false 
         return Array.from({ length: count }).map((_, i) => {
           const randomX = Math.random();
           const randomY = Math.random();
-          const randomDelay = Math.random() * 10; // Delay aleatório entre 0 e 50s
+          const randomDelay = Math.random() * 10;
           const style = {
             '--random-x': randomX,
             '--random-y': randomY,
@@ -25,7 +25,7 @@ const Background: React.FC<BackgroundProps> = ({ children, startFalling = false 
           return (
             <div
               key={`${size}-${i}`}
-              className={`background ${BackgroundStyles.stars} ${BackgroundStyles[size]}`}
+              className={`background_stars ${BackgroundStyles.stars} ${BackgroundStyles[size]}`}
               style={style}
             />
           );
@@ -41,7 +41,7 @@ const Background: React.FC<BackgroundProps> = ({ children, startFalling = false 
   }, [startFalling]);
 
   return (
-    <div className={BackgroundStyles.background}>
+    <div className={BackgroundStyles.background_stars}>
       {children}
       {stars}
     </div>
