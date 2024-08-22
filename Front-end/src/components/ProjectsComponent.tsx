@@ -15,8 +15,8 @@ const ProjectsComponent: React.FC = () => {
 
   useEffect(() => {
 
-    //fetch('https://portfolio-2024-2lfvvj6cl-pedrowiskdevs-projects.vercel.app/api/projects')
-    fetch('http://localhost:3000/api/projects')
+    fetch('https://portfolio-2024-2lfvvj6cl-pedrowiskdevs-projects.vercel.app/api/projects')
+    //fetch('http://localhost:3000/api/projects')
 
 
       .then((response) => response.json())
