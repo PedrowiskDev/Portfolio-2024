@@ -15,10 +15,11 @@ const ProjectsComponent: React.FC = () => {
 
   useEffect(() => {
 
-    fetch('https://portfolio-2024-2lfvvj6cl-pedrowiskdevs-projects.vercel.app/api/projects')
-    //fetch('http://localhost:3000/api/projects')
+    const apiUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}/api/projects`
+      : 'http://localhost:3000/api/projects';
 
-
+    fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error('Error fetching projects:', error));

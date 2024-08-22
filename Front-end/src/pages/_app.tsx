@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
+      <SpeedInsights />
     </div>
   );
 }

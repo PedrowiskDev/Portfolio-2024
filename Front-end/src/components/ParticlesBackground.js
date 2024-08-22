@@ -17,7 +17,7 @@ const ParticlesBackground = () => {
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  }, [init]);
 
   return (
     <Particles id="tsparticles" options={particlesConfig} />

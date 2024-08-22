@@ -19,7 +19,7 @@ const HexagonsParticles = () => {
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  }, [init]);
 
   return (
     <Particles id="tsparticles" options={hexagonsConfig} />

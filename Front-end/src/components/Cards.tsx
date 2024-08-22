@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface CardProps {
   imageSrc: string;
@@ -11,7 +12,14 @@ const Card: React.FC<CardProps> = ({ imageSrc, title, description, link }) => {
   return (
     <div className="max-w-sm glass-effect">
       <a href={link}>
-        <img className="rounded-t-lg" src={imageSrc} alt={title} />
+        <Image
+          className="rounded-t-lg"
+          src={imageSrc}
+          alt={title}
+          width={800}
+          height={800}
+          layout="responsive"
+        />
       </a>
       <div className="p-5">
         <a href={link}>
