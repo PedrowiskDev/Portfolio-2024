@@ -15,13 +15,15 @@ const ProjectsComponent: React.FC = () => {
 
   useEffect(() => {
     const apiUrl = process.env.NODE_ENV === 'production'
-      ? '/api/projects'  // Rota relativa para produção
-      : 'http://localhost:3000/api/projects';  // Rota completa para desenvolvimento
-  
+      ? '/api/projects'
+      : 'http://localhost:3000/api/projects';
+    console.log(process.env.NODE_ENV);
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          return response.text().then((text) => {
+            throw new Error(`HTTP error! Status: ${response.status}, Response: ${text}`);
+          });
         }
         return response.json();
       })
@@ -30,10 +32,11 @@ const ProjectsComponent: React.FC = () => {
         console.error('Error fetching projects:', error.message);
         console.error('Error details:', error);
       });
+    console.log(projects);
   }, []);
-  
-  
-  
+
+
+
 
   return (
     <motion.nav
