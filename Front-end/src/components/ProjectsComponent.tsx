@@ -14,9 +14,9 @@ const ProjectsComponent: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    const apiUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/projects`
-      : 'http://localhost:3000/api/projects';
+    const apiUrl = process.env.NODE_ENV === 'production'
+      ? '/api/projects'  // Rota relativa para produção
+      : 'http://localhost:3000/api/projects';  // Rota completa para desenvolvimento
   
     fetch(apiUrl)
       .then((response) => {
@@ -31,6 +31,7 @@ const ProjectsComponent: React.FC = () => {
         console.error('Error details:', error);
       });
   }, []);
+  
   
   
 
