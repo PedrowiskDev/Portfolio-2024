@@ -26,8 +26,12 @@ const ProjectsComponent: React.FC = () => {
         return response.json();
       })
       .then((data) => setProjects(data))
-      .catch((error) => console.error('Error fetching projects:', error));
+      .catch((error) => {
+        console.error('Error fetching projects:', error.message);
+        console.error('Error details:', error);
+      });
   }, []);
+  
   
 
   return (
