@@ -14,16 +14,21 @@ const ProjectsComponent: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-
-    const apiUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}/api/projects`
+    const apiUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/projects`
       : 'http://localhost:3000/api/projects';
-
+  
     fetch(apiUrl)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => setProjects(data))
       .catch((error) => console.error('Error fetching projects:', error));
   }, []);
+  
 
   return (
     <motion.nav
