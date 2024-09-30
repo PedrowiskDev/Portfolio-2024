@@ -17,7 +17,6 @@ const ProjectsComponent: React.FC = () => {
     const apiUrl = process.env.NODE_ENV === 'production'
       ? '/api/projects'
       : 'http://localhost:3000/api/projects';
-    console.log(process.env.NODE_ENV);
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
@@ -32,9 +31,7 @@ const ProjectsComponent: React.FC = () => {
         console.error('Error fetching projects:', error.message);
         console.error('Error details:', error);
       });
-    console.log(projects);
   }, []);
-
 
 
 
@@ -51,7 +48,7 @@ const ProjectsComponent: React.FC = () => {
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 1 }} // Atraso incremental
+            transition={{ duration: 0.5, delay: index * 1 }}
           >
             <Card
               imageSrc={project.imageSrc}
